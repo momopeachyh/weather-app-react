@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="small-wrapper">
         <small>
           <a
-            href="https://github.com/momopeachyh/weather-app"
+            href="https://github.com/momopeachyh/weather-app-react"
             target="#"
             className="repository-link"
           >
