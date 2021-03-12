@@ -6,7 +6,7 @@ import Overview from "./Overview";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
 
-export default function Weather() {
+export default function App() {
   return (
     <div className="Weather">
       <div className="app-wrapper">
