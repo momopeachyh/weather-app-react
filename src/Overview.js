@@ -24,7 +24,7 @@ export default function Overview() {
               <a href="#" className="active">
                 C
               </a>
-              |<a href="#">F</a>
+              |<a href="/">F</a>
             </span>
           </div>
         </div>
