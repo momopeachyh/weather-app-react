@@ -8,24 +8,26 @@ import Footer from "./Footer";
 
 export default function App() {
   return (
-    <div className="Weather">
-      <div className="app-wrapper">
-        <Search />
-        <div className="row heading">
-          <div className="col-6">
-            <City />
-            <Date />
+    <div className="App">
+      <div className="Container">
+        <div className="app-wrapper">
+          <Search />
+          <div className="row heading">
+            <div className="col-6">
+              <City />
+              <Date />
+            </div>
           </div>
+
+          <div className="overview">
+            <Overview />
+          </div>
+
+          <Forecast />
         </div>
 
-        <div className="overview">
-          <Overview />
-        </div>
-
-        <Forecast />
+        <Footer />
       </div>
-
-      <Footer />
     </div>
   );
 }

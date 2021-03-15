@@ -8,7 +8,7 @@ export default function Footer() {
         <small>
           <a
             href="https://github.com/momopeachyh/weather-app-react"
-            target="#"
+            target="_blank"
             className="repository-link"
           >
             Open-source code
