@@ -1,4 +1,4 @@
-body {
+.App body {
   display: block;
   font-family: "Catamaran", sans-serif;
   margin: 30px auto;
@@ -6,20 +6,20 @@ body {
   max-width: 90%;
 }
 
-.app-wrapper {
+.App .app-wrapper {
   border: 1px solid black;
   padding: 40px 40px;
   border-radius: 10px;
   background-image: linear-gradient(140deg, #fdfcfb 0%, #00bcd4 100%);
 }
 
-h2,
+.App h2,
 span {
   font-size: 25px;
   line-height: 0.8;
 }
 
-.heading {
+.App .heading {
   margin: 10px 10px 0px;
 }
 
@@ -42,7 +42,7 @@ span {
   color: #ffeb3b;
 }
 
-.Forecast .forecast-wrapper {
+.Forecast {
   background-color: rgba(253, 252, 251, 0.3);
   border-radius: 10px;
   font-size: 35px;
@@ -51,59 +51,59 @@ span {
   text-align: center;
 }
 
-.overview {
+.Overview {
   margin: 10px 0px 30px 24px;
 }
 
-.todays-temp {
+.Overview .todays-temp {
   font-size: 50px;
   font-weight: normal;
   position: relative;
   top: 15px;
 }
 
-.active {
+.Overview .active {
   color: black;
   text-decoration: none;
   cursor: default;
 }
 
-.active:hover {
+.Overview .active:hover {
   color: black;
 }
 
-.current-temp {
+.Overview .current-temp {
   position: relative;
   right: 30px;
 }
 
-.temp-conversion {
+.Overview .temp-conversion {
   font-size: 25px;
 }
 
-.overview h2,
+.Overview h2,
 span {
   font-size: 25px;
   line-height: 0.8;
 }
 
-.btn {
+.Search .btn {
   color: white;
   background-color: #00bcd4;
   border: #00bcd4;
   transition: all 150 ease-in-out;
 }
 
-.btn:hover {
+.Search .btn:hover {
   color: white;
   background-color: #ffeb3b;
   border-color: #ffeb3b;
 }
 
-.search-bar {
+.Search .search-bar {
   border-color: #00bcd4;
 }
 
-.search-bar:focus {
+.Search .search-bar:focus {
   border-color: #00bcd4;
 }
