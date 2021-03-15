@@ -21,10 +21,7 @@ export default function Overview() {
             />
             <span className="todays-temp">{weatherData.temp}°</span>
             <span className="temp-conversion">
-              <a href="#" className="active">
-                C
-              </a>
-              |<a href="/">F</a>
+              <span className="active">C</span>|<span>F</span>
             </span>
           </div>
         </div>
