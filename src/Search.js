@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
+import City from "./City";
+import Date from "./Date";
+import WeatherOverview from "./WeatherOverview";
+import Forecast from "./Forecast";
+
 import "./App.css";
 
-export default function Search() {
-  const [city, setCity] = useState(null);
+export default function Search(props) {
+  console.log(props.defaultCity);
+  const [city, setCity] = useState(props.defaultCity);
+  const [weatherData, setWeatherData] = useState({ loaded: false });
 
   function searchCity(event) {
     event.preventDefault();
@@ -11,7 +18,15 @@ export default function Search() {
   }
 
   function showWeather(response) {
-    console.log(response.data);
+    setWeatherData({
+      loaded: true,
+      city: response.data.name,
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      icon: response.data.weather[0].icon,
+    });
   }
 
   function handleSubmit(event) {
@@ -69,6 +84,9 @@ export default function Search() {
           </div>
         </div>
       </form>
+      <City city={weatherData.city} />
+      <Date />
+      <WeatherOverview data={weatherData} />
     </div>
   );
 }

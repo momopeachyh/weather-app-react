@@ -1,16 +1,9 @@
 import React from "react";
 import "./App.css";
 
-export default function Overview() {
-  let weatherData = {
-    temp: 19,
-    description: "Windy",
-    humidity: 10,
-    wind: 10,
-  };
-
+export default function WeatherOverview(props) {
   return (
-    <div className="Overview">
+    <div className="WeatherOverview">
       <div className="row">
         <div className="col-6">
           <div className="current-temp">
@@ -19,16 +12,18 @@ export default function Overview() {
               alt=""
               className="header"
             />
-            <span className="todays-temp">{weatherData.temp}°</span>
+            <span className="todays-temp">
+              {Math.round(props.data.temperature)}°
+            </span>
             <span className="temp-conversion">
               <span className="active">C</span>|<span>F</span>
             </span>
           </div>
         </div>
         <div className="col-6 ">
-          <h2>{weatherData.description}</h2>
-          <h2>Humidity: {weatherData.humidity}%</h2>
-          <h2>Wind: {weatherData.wind} km/h</h2>
+          <h2 className="description">{props.data.description}</h2>
+          <h2>Humidity: {props.data.humidity}%</h2>
+          <h2>Wind: {props.data.wind} km/h</h2>
         </div>
       </div>
     </div>

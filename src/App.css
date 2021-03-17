@@ -51,37 +51,37 @@ span {
   text-align: center;
 }
 
-.Overview {
+.WeatherOverview {
   margin: 10px 0px 30px 24px;
 }
 
-.Overview .todays-temp {
+.WeatherOverview .todays-temp {
   font-size: 50px;
   font-weight: normal;
   position: relative;
   top: 15px;
 }
 
-.Overview .active {
+.WeatherOverview .active {
   color: black;
   text-decoration: none;
   cursor: default;
 }
 
-.Overview .active:hover {
+.WeatherOverview .active:hover {
   color: black;
 }
 
-.Overview .current-temp {
+.WeatherOverview .current-temp {
   position: relative;
   right: 30px;
 }
 
-.Overview .temp-conversion {
+.WeatherOverview .temp-conversion {
   font-size: 25px;
 }
 
-.Overview h2,
+.WeatherOverview h2,
 span {
   font-size: 25px;
   line-height: 0.8;
@@ -106,4 +106,8 @@ span {
 
 .Search .search-bar:focus {
   border-color: #00bcd4;
+}
+
+.WeatherOverview .description::first-letter {
+  text-transform: capitalize;
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 
-export default function City() {
+export default function City(props) {
   return (
     <div className="City">
-      <h1>Chicago</h1>
+      <h1>{props.city}</h1>
     </div>
   );
 }
