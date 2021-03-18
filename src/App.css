@@ -87,24 +87,24 @@ span {
   line-height: 0.8;
 }
 
-.Search .btn {
+.SearchWeather .btn {
   color: white;
   background-color: #00bcd4;
   border: #00bcd4;
   transition: all 150 ease-in-out;
 }
 
-.Search .btn:hover {
+.SearchWeather .btn:hover {
   color: white;
   background-color: #ffeb3b;
   border-color: #ffeb3b;
 }
 
-.Search .search-bar {
+.SearchWeather .search-bar {
   border-color: #00bcd4;
 }
 
-.Search .search-bar:focus {
+.SearchWeather .search-bar:focus {
   border-color: #00bcd4;
 }
 
