@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import City from "./City";
-import Date from "./Date";
+import FormattedDate from "./FormattedDate";
 import WeatherOverview from "./WeatherOverview";
 import "./App.css";
 
@@ -86,7 +86,7 @@ export default function SearchWeather(props) {
           </div>
         </form>
         <City city={weatherData.city} />
-        <Date date={weatherData.date} />
+        <FormattedDate date={weatherData.date} />
         <WeatherOverview data={weatherData} />
       </div>
     );
