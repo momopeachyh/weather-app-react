@@ -18,6 +18,7 @@ export default function SearchWeather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -85,7 +86,7 @@ export default function SearchWeather(props) {
           </div>
         </form>
         <City city={weatherData.city} />
-        <Date />
+        <Date date={weatherData.date} />
         <WeatherOverview data={weatherData} />
       </div>
     );

@@ -1,19 +1,17 @@
 import React from "react";
 import "./App.css";
 
-export default function Date() {
-  let date = {
-    weekDay: "Friday",
-    time: "12:50",
-  };
+export default function Date(props) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-  return (
-    <div className="Date">
-      <h2>
-        <span>
-          {date.weekDay} {date.time}
-        </span>
-      </h2>
-    </div>
-  );
+  let day = days[props.date.getDay()];
+  return day;
 }
