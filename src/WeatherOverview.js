@@ -8,7 +8,7 @@ export default function WeatherOverview(props) {
         <div className="col-6">
           <div className="current-temp">
             <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
+              src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
               alt=""
               className="header"
             />
