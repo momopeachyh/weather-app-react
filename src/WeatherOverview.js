@@ -1,24 +1,20 @@
 import React from "react";
-import "./App.css";
+import CurrentTemp from "./CurrentTemp";
 
 export default function WeatherOverview(props) {
   return (
     <div className="WeatherOverview">
       <div className="row">
-        <div className="col-6">
-          <div className="current-temp">
-            <img
-              src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
-              alt=""
-              className="header"
-            />
-            <span className="todays-temp">
-              {Math.round(props.data.temperature)}°
-            </span>
-            <span className="temp-conversion">
-              <span className="active">C</span>|<span>F</span>
-            </span>
-          </div>
+        <div className="col-3">
+          <img
+            className="col-3"
+            src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
+            alt=""
+            className="header"
+          />
+        </div>
+        <div className="col-3">
+          <CurrentTemp className="col-3" celsius={props.data.temperature} />
         </div>
         <div className="col-6 ">
           <h2 className="description">{props.data.description}</h2>

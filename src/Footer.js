@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="Footer">
       <div className="small-wrapper">
-        <small>
+        <div>
           <a
             href="https://github.com/momopeachyh/weather-app-react"
             target="_blank"
@@ -14,7 +14,7 @@ export default function Footer() {
             Open-source code
           </a>{" "}
           by Heidi Willden
-        </small>
+        </div>
       </div>
     </div>
   );
