@@ -77,7 +77,7 @@ export default function SearchWeather(props) {
             <div className="col-2">
               <button
                 type="button"
-                className="btn form-control shadow-sm"
+                className="btn form-control shadow-sm geolocation"
                 onClick={getPosition}
               >
                 <i className="fas fa-location-arrow"></i>
