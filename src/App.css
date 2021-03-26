@@ -63,28 +63,17 @@ span {
   top: 15px;
 }
 
-.WeatherOverview .active {
-  color: black;
-  text-decoration: none;
-  cursor: default;
-}
-
-.WeatherOverview .active:hover {
-  color: black;
-}
-
-.CurrentTemp span {
-  font-size: 25px;
-  position: relative;
-  top: 18px;
-  right: 28px;
-}
-
-.CurrentTemp .temp {
+.CurrentTemp {
   font-size: 50px;
   position: relative;
   top: 30px;
-  right: 30px;
+  right: 45px;
+}
+
+.CurrentTemp .conversion {
+  font-size: 25px;
+  position: relative;
+  bottom: 15px;
 }
 
 .WeatherOverview h2,

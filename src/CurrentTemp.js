@@ -15,33 +15,30 @@ export default function CurrentTemp(props) {
 
   if (unit === "celsius") {
     return (
-      <div className="CurrentTemp">
-        <span className="temp">{Math.round(props.celsius)}°</span>
-        <span className="conversion">
-          <a href="/" onClick={showCelsius}>
-            C
-          </a>
-          |
-          <a href="a" onClick={showFahrenheit}>
-            F
-          </a>
+      <div>
+        <span className="CurrentTemp">
+          {Math.round(props.celsius)}°
+          <span className="conversion">
+            {" "}
+            C|
+            <a href="a" onClick={showFahrenheit}>
+              F
+            </a>
+          </span>
         </span>
       </div>
     );
   } else {
     return (
-      <div className="CurrentTemp">
-        <span className="temp">
+      <div>
+        <span className="CurrentTemp">
           {Math.round((props.celsius * 9) / 5 + 32)}°
-        </span>
-        <span className="conversion">
-          <a href="/" onClick={showCelsius}>
-            C
-          </a>
-          |
-          <a href="a" onClick={showFahrenheit}>
-            F
-          </a>
+          <span className="conversion">
+            <a href="/" onClick={showCelsius}>
+              C
+            </a>
+            |F
+          </span>
         </span>
       </div>
     );
