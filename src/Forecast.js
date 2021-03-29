@@ -1,53 +1,16 @@
 import React from "react";
-import "./App.css";
+import axios from "axios";
 
-export default function Forecast() {
-  return (
-    <div className="Forecast">
-      <div className="row ">
-        <div class="col">
-          <h3>Sat</h3>
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            className="forecast"
-            alt=""
-          />
-          <h3>55°</h3>
-        </div>
+export default function Forecast(props) {
+  return props.city;
+  console.log(props.city);
 
-        <div class="col">
-          <h3>Sat</h3>
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            id="weather-icon"
-            className="forecast"
-            alt=""
-          />
-          <h3>55°</h3>
-        </div>
+  function getForecast(response) {
+    console.log(response);
+  }
 
-        <div class="col">
-          <h3>Sat</h3>
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            id="weather-icon"
-            className="forecast"
-            alt=""
-          />
-          <h3>55°</h3>
-        </div>
-
-        <div class="col">
-          <h3>Sat</h3>
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            id="weather-icon"
-            className="forecast"
-            alt=""
-          />
-          <h3>55°</h3>
-        </div>
-      </div>
-    </div>
-  );
+  const apiKey = "343320b5e251ee7c39260263367d8fb5";
+  const units = "metric";
+  let url = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=${units}`;
+  axios.get(url).then(getForecast);
 }

@@ -3,6 +3,8 @@ import axios from "axios";
 import City from "./City";
 import FormattedDate from "./FormattedDate";
 import WeatherOverview from "./WeatherOverview";
+import Forecast from "./Forecast";
+
 import "./App.css";
 
 export default function SearchWeather(props) {
@@ -88,6 +90,7 @@ export default function SearchWeather(props) {
         <City city={weatherData.city} />
         <FormattedDate date={weatherData.date} />
         <WeatherOverview data={weatherData} />
+        <Forecast city={weatherData.city} />
       </div>
     );
   } else {

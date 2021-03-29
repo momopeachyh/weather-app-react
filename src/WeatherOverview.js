@@ -7,10 +7,9 @@ export default function WeatherOverview(props) {
       <div className="row">
         <div className="col-3">
           <img
-            className="col-3"
             src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
             alt=""
-            className="header"
+            className="overviewIcon"
           />
         </div>
         <div className="col-3">
