@@ -2,8 +2,7 @@ import React from "react";
 import axios from "axios";
 
 export default function Forecast(props) {
-  return props.city;
-  console.log(props.city);
+  return "chicago";
 
   function getForecast(response) {
     console.log(response);
