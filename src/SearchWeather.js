@@ -90,7 +90,7 @@ export default function SearchWeather(props) {
         <City city={weatherData.city} />
         <FormattedDate date={weatherData.date} />
         <WeatherOverview data={weatherData} />
-        <Forecast city={weatherData.city} />
+        <Forecast city={weatherData.city} icon={weatherData.icon} />
       </div>
     );
   } else {
