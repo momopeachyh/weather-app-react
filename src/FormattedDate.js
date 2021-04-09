@@ -16,11 +16,21 @@ export default function FormattedDate(props) {
   let hour = props.date.getHours();
   let minute = props.date.getMinutes();
 
-  return (
-    <div className="FormattedDate">
-      <h2>
-        {day} {hour}:{minute}
-      </h2>
-    </div>
-  );
+  if (minute < 10) {
+    return (
+      <div className="FormattedDate">
+        <h2>
+          {day} {hour}:0{minute}
+        </h2>
+      </div>
+    );
+  } else {
+    return (
+      <div className="FormattedDate">
+        <h2>
+          {day} {hour}:0{minute}
+        </h2>
+      </div>
+    );
+  }
 }
