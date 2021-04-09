@@ -15,6 +15,7 @@ export default function SearchWeather(props) {
     setWeatherData({
       loaded: true,
       city: response.data.name,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -36,7 +37,7 @@ export default function SearchWeather(props) {
   function Search() {
     const apiKey = "343320b5e251ee7c39260263367d8fb5";
     const units = "metric";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(url).then(showWeather);
   }
 
@@ -45,7 +46,7 @@ export default function SearchWeather(props) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.latitude;
     const units = "metric";
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
     axios.get(url).then(showWeather);
   }
 
@@ -90,7 +91,10 @@ export default function SearchWeather(props) {
         <City city={weatherData.city} />
         <FormattedDate date={weatherData.date} />
         <WeatherOverview data={weatherData} />
-        <Forecast city={weatherData.city} icon={weatherData.icon} />
+        <Forecast
+          coordinates={weatherData.coordinates}
+          icon={weatherData.icon}
+        />
       </div>
     );
   } else {
