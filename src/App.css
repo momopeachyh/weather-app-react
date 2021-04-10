@@ -43,15 +43,6 @@ span {
   color: #ffeb3b;
 }
 
-.Forecast {
-  background-color: rgba(253, 252, 251, 0.3);
-  border-radius: 10px;
-  font-size: 35px;
-  max-width: 100%;
-  padding: 15px 0px;
-  text-align: center;
-}
-
 .WeatherOverview {
   margin: 10px 0px 30px 24px;
 }
