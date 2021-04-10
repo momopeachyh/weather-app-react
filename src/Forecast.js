@@ -15,7 +15,19 @@ export default function Forecast(props) {
   if (loaded) {
     return (
       <div className="Forecast">
-        <FormattedForecast data={forecastData} />
+        <div className="row">
+          {forecastData.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <FormattedForecast data={dailyForecast} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
       </div>
     );
   } else {
