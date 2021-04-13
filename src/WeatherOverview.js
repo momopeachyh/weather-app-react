@@ -1,5 +1,4 @@
 import React from "react";
-import CurrentTemp from "./CurrentTemp";
 
 export default function WeatherOverview(props) {
   return (
@@ -13,7 +12,7 @@ export default function WeatherOverview(props) {
           />
         </div>
         <div className="col-3">
-          <CurrentTemp className="col-3" celsius={props.data.temperature} />
+          <h2>{Math.round(props.data.temperature)}°C</h2>
         </div>
         <div className="col-6 ">
           <h2 className="description">{props.data.description}</h2>
