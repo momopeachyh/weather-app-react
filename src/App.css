@@ -43,36 +43,6 @@ span {
   color: #ffeb3b;
 }
 
-.WeatherOverview {
-  margin: 10px 0px 30px 24px;
-}
-
-.WeatherOverview .todays-temp {
-  font-size: 50px;
-  font-weight: normal;
-  position: relative;
-  top: 15px;
-}
-
-.CurrentTemp {
-  font-size: 50px;
-  position: relative;
-  top: 30px;
-  right: 45px;
-}
-
-.CurrentTemp .conversion {
-  font-size: 25px;
-  position: relative;
-  bottom: 15px;
-}
-
-.WeatherOverview h2,
-span {
-  font-size: 25px;
-  line-height: 0.8;
-}
-
 .SearchWeather .btn {
   color: white;
   background-color: #00bcd4;
@@ -101,8 +71,4 @@ span {
 
 .SearchWeather .search-bar:focus {
   border-color: #00bcd4;
-}
-
-.WeatherOverview .description::first-letter {
-  text-transform: capitalize;
 }
