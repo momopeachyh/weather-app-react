@@ -1,7 +1,7 @@
 .Forecast {
   background-color: rgba(253, 252, 251, 0.3);
   border-radius: 10px;
-  font-size: 35px;
+  font-size: 25px;
   max-width: 100%;
   padding: 15px 0px;
   text-align: center;
@@ -13,4 +13,8 @@
 
 .col {
   margin: none;
+}
+
+img {
+  width: 90px;
 }
