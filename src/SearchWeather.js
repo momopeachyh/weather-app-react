@@ -4,8 +4,7 @@ import City from "./City";
 import FormattedDate from "./FormattedDate";
 import WeatherOverview from "./WeatherOverview";
 import Forecast from "./Forecast";
-
-import "./App.css";
+import "./SearchWeather.css";
 
 export default function SearchWeather(props) {
   const [city, setCity] = useState(props.defaultCity);

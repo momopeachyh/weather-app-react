@@ -1,5 +1,5 @@
 .WeatherOverview {
-  margin: 10px 0px 30px 24px;
+  margin: 10px 0px 15px 35px;
 }
 
 .todays-temp {
@@ -7,7 +7,7 @@
   font-weight: lighter;
   position: relative;
   top: 25px;
-  right: 60px;
+  right: 50px;
 }
 
 .celsius {
@@ -15,7 +15,7 @@
   line-height: 0.8;
   position: relative;
   top: 15px;
-  right: 56px;
+  right: 45px;
 }
 
 .description::first-letter {

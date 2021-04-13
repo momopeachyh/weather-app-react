@@ -1,0 +1,8 @@
+a {
+  font-size: 15px;
+  color: #00bcd4;
+}
+
+a:hover {
+  color: #ffeb3b;
+}
