@@ -3,3 +3,9 @@
   line-height: 0.8;
   margin-left: 45px;
 }
+
+@media (max-width: 540px) {
+  .FormattedDate h2 {
+    text-align: center;
+  }
+}
