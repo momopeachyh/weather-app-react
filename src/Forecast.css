@@ -18,3 +18,10 @@
 img {
   width: 90px;
 }
+
+@media (max-width: 540px) {
+  .Forecast,
+  .Forecast-temp span {
+    font-size: 15px;
+  }
+}

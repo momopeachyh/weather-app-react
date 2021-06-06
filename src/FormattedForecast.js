@@ -1,4 +1,5 @@
 import React from "react";
+import "./Forecast.css";
 
 export default function FormattedForecast(props) {
   function formatDay() {
@@ -23,7 +24,7 @@ export default function FormattedForecast(props) {
       <div className="Forecast-day">{formatDay()}</div>
       <img
         src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
-        className="Forecast-icon"
+        className="Forecast-icon img-fluid"
         alt=""
       />
       <div className="Forecast-temp">
