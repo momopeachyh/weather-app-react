@@ -21,3 +21,28 @@
 .description::first-letter {
   text-transform: capitalize;
 }
+
+@media (max-width: 540px) {
+  .WeatherOverview {
+    margin: 0;
+  }
+
+  .temp-number {
+    font-size: 30px;
+    position: relative;
+    top: 30px;
+    right: 20px;
+  }
+
+  .celsius {
+    font-size: 20px;
+    position: relative;
+    top: 30px;
+    right: 20px;
+  }
+
+  .overviewIcon {
+    position: relative;
+    left: 25px;
+  }
+}

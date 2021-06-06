@@ -5,14 +5,14 @@ export default function WeatherOverview(props) {
   return (
     <div className="WeatherOverview">
       <div className="row">
-        <div className="col-3">
+        <div className="col">
           <img
             src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
             alt=""
-            className="overviewIcon"
+            className="overviewIcon img-fluid"
           />
         </div>
-        <div className="col-3">
+        <div className="col">
           <div className="todays-temp">
             <span className="temp-number">
               {Math.round(props.data.temperature)}
