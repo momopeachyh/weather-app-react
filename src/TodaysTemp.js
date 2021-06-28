@@ -19,9 +19,7 @@ export default function TodaysTemp(props) {
       <div className="todays-temp">
         <span className="temp-number">{Math.round(props.temp)}</span>
         <span className="temp-units">
-          <a className="celsius active" href="/" onClick={ConvertToCelsius}>
-            °C
-          </a>
+          °C
           {""} | {""}
           <a className="fahrenheit" href="/" onClick={ConvertToFahrenheit}>
             °F
@@ -40,13 +38,7 @@ export default function TodaysTemp(props) {
             °C
           </a>
           {""} | {""}
-          <a
-            className="fahrenheit active"
-            href="/"
-            onClick={ConvertToFahrenheit}
-          >
-            °F
-          </a>
+          °F
         </span>
       </div>
     );
