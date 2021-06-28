@@ -1,19 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./WeatherOverview.css";
+import TodaysTemp from "./TodaysTemp";
 
 export default function WeatherOverview(props) {
-  const [temp, setTemp] = useState(Math.round(props.data.temperature));
-
-  function ShowCelsius(e) {
-    e.preventDefault();
-    setTemp(Math.round(props.data.temperature));
-  }
-
-  function ShowFahrenheit(e) {
-    e.preventDefault();
-    setTemp((temp * 9) / 5 + 32);
-  }
-
   return (
     <div className="WeatherOverview">
       <div className="row">
@@ -25,18 +14,7 @@ export default function WeatherOverview(props) {
           />
         </div>
         <div className="col">
-          <div className="todays-temp">
-            <span className="temp-number">{temp}</span>
-            <span className="temp-units">
-              <a className="celsius" href="/" onClick={ShowCelsius}>
-                °C
-              </a>
-              {""} {""}
-              <a className="fahrenheit" href="/" onClick={ShowFahrenheit}>
-                °F
-              </a>
-            </span>
-          </div>
+          <TodaysTemp temp={props.data.temperature} />
         </div>
         <div className="col-6 d-none d-md-block">
           <h2 className="description">{props.data.description}</h2>
