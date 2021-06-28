@@ -11,6 +11,7 @@ export default function SearchWeather(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
 
   function showWeather(response) {
+    console.log(response);
     setWeatherData({
       loaded: true,
       city: response.data.name,
